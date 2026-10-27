@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> Cascading Style Sheets </title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <div id = "content">
+    <div id = "menu">
+        <ul>
+            <li><a href = "index.html">CSS </a></li>
+            <li><a href = "syntax.html">Синтаксис CSS </a></li>
+            <li><a href = "fonts.html">CSS шрифты</a><li>
+            <li><a class = "active" href = "blocks.html">Блочное представление</a></li>
+        </ul>
+    </div>
+    
+    <div class="blocks">
+  <!-- ряд 1 -->
+  <div class="b-row">
+    <div class="b-cell">
+      <div class="b-inner">
+        <img src="pict/block1.png" alt="Картинка про CSS">
+      </div>
+    </div>
+    <div class="b-cell">
+      <div class="b-inner">
+        <img src="pict/block2.png" alt="Картинка про CSS">
+      </div>
+    </div>
+  </div>
+
+  <!-- ряд 2 -->
+  <div class="b-row">
+    <div class="b-cell">
+      <div class="b-inner">
+        <img src="pict/block3.png" alt="Картинка про CSS">
+      </div>
+    </div>
+    <div class="b-cell">
+      <div class="b-inner b-text">
+        Элементы также имеют внутренний тип отображения, который определяет
+        расположение элементов внутри них.
+      </div>
+      <div class="b-inner b-text">
+        Когда вы перейдёте к более подробному изучению CSS вёрстки, вы встретите
+        flex и другие внутренние значения, которые могут быть у ваших элементов,
+        например grid.
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</body>
+</html>

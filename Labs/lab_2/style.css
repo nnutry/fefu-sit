@@ -1,0 +1,137 @@
+body {
+    background: #164B69;
+}
+#content {
+    width: 60%;
+    background: #E3E3E3;
+    padding: 1%;
+    margin: auto; /* выравнивание блока по центру */
+}
+#menu {
+    text-align: center; /* центрирование меню */
+    font-weight: bold;
+}
+#menu ul {
+    display: inline-block; /* необходимо, чтобы центрировать меню, в
+    противном случае UL тэг не будет реагировать на свойство text-align*/
+    list-style-type: none; /*ul без маркера перед каждым элементом*/
+    margin: 0;
+    padding: 0;
+}
+#menu li {
+    float: left; /* чтобы меню стало горизонтальным */
+}
+#menu a {
+    display: block; /* преобразование элемента в блок*/
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none; /* ссылки без подчеркивания*/
+}
+
+/* изменение цвета меню, когда на него наводится курсор */
+#menu a:hover {
+    background: #DCDCDC;
+}
+#menu .active{
+    background: #DCDCDC;
+}
+
+/* для текстовых блоков*/
+.article div {
+    overflow: hidden; /* блок охватывает содержимое */
+    margin: 10px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    word-spacing: 5px;
+    line-height: 2.0;
+}
+
+/* для рисунка*/
+#logo {
+    display: block;
+    float: right;
+    margin-left:10px;
+}
+
+
+/* --- Самостоятельное задание --- */
+
+/* Для видео */
+video {
+    display: block;   
+    margin: 30px auto;
+    max-width: 100%;
+}
+
+/* Для Image-Section и картинок шрифтов */
+.image-section {
+    overflow: hidden;
+    padding : 10px;
+}
+
+.image-section img {
+    width : 100%;
+    height: auto;
+}
+.image {
+    float: left;
+    width: 33.33333%;
+}
+.image-wrapper {
+    margin: 10px;
+}
+
+/* Для Text-Section */
+.text-section p {
+    overflow: hidden;
+    margin: 10px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    word-spacing: 5px;
+    line-height: 2.0;
+}
+
+.text-section ul {
+    overflow: hidden;
+    margin: 10px 0px;
+    text-align: justify;
+    word-spacing: 5px;
+    line-height: 2.0;
+}
+
+/* Текст */
+.important {
+    font-weight: bold;
+}
+.code {
+    font-family: monospace; 
+}
+
+
+
+/* страница Блоки, вариант 1 */
+.blocks { overflow: hidden; padding: 10px; }
+
+.b-row { overflow: hidden; }
+
+.b-cell {
+  float: left;
+  width: 50%;
+}
+
+.b-inner {
+  margin: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.b-inner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.b-text {
+  text-align: justify;
+  text-indent: 30px;
+}

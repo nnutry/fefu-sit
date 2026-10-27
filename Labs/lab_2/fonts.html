@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> Шрифты CSS </title>
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head>
+<body>
+    <div id = "content">
+        <div id = "menu">
+            <ul>
+                <li><a href = "index.html">CSS </a></li>
+                <li><a href = "syntax.html">Синтаксис CSS </a></li>
+                <li><a class = "active" href = "fonts.html">CSS шрифты</a><li>
+                <li><a href = "blocks.html">Блочное представление</a></li>
+            </ul>
+        </div>
+        <!-- Картинки -->
+        <div class="image-section">
+            <div class="image">
+                <div class="image-wrapper">
+                    <img src="pict/image1.png">
+                </div>
+            </div>
+            <div class="image">
+                <div class="image-wrapper">
+                    <img src="pict/image2.png">
+                </div>
+            </div>
+            <div class="image">
+                <div class="image-wrapper">
+                    <img src="pict/image3.png">
+                </div>
+            </div>
+        </div>
+        <!-- Текст  -->
+        <div class = "text-section">
+            <p>
+                <span class="code important">font</span> - универсальное свойство, которое позволяет одновреенно задать 
+                несколько характеристик. Чтобы свойство font работало корректно, значения должны
+                 указываться в строго определенном порядке:
+            </p>
+
+            <p>
+                <span class="code"> селектор { <br>
+                font: [font-style] [font-variant] [font-weight] [font-stretch] [font-size]/[line-height] [font-family];<br>
+                }</span>
+            </p>
+            
+            <p>
+                <span class="code important">font-style</span> - это свойство в CSS, которое определяет начертание шрифта: обычное, курсивное (italic) или наклонное (oblique).
+                В основном его используют для того, чтобы выделить текст или отдельные слова в абзаце. Доступные значения:
+            </p>
+
+            <ul>
+                <li><span class="important">normal </span>(по умолчанию) - обычное (прямое) начертание текста.</li>
+                <li><span class="important">italic</span> - курсивное начертание.</li>
+                <li><span class="important">oblique</span> - наклонное начертание.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

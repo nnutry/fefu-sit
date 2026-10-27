@@ -26,18 +26,19 @@
             <!--Значениие по ОХ-->
             <div>
                 <a><b>Значение по оси X</b></a><br>
-                <label><input type="radio" name="ox"> Производитель</label><br>
-                <label><input type="radio" name="ox"> Страна</label><br>
-                <label><input type="radio" name="ox"> Год выпуска</label><br>
+                <label><input type="radio" name="ox" id=""ox-manufacturer> Производитель</label><br>
+                <label><input type="radio" name="ox" id="ox-country" > Страна</label><br>
+                <label><input type="radio" name="ox" id="ox-year"> Год выпуска</label><br>
             </div>
 
             <!--Значениие по OY-->
             <br>
             <div>
                 <a><b>Значение по оси Y</b></a><br>
-                <label><input type="checkbox" name="oy"> Максимальная цена</label><br>
-                <label><input type="checkbox" name="oy"> Минимальная цена</label><br>
-                <label><input type="checkbox" name="oy"> Количество телефонов</label><br>
+                <label><input type="checkbox" name="oy" id="oy-max-price"> Максимальная цена</label><br>
+                <label><input type="checkbox" name="oy" id="oy-min-price"> Минимальная цена</label><br>
+                <label><input type="checkbox" name="oy" id="oy-avg-price"> Средняя цена</label><br>
+                <label><input type="checkbox" name="oy" id="oy-count"> Количество телефонов</label><br>
             </div>
         </form>
         <br>
@@ -53,52 +54,42 @@
 
         <form>
             <p>
-                <label>Название модели:</label>
-                <input type="text">
+                <label>Название модели: <input type="text" id="filter-model-name"></label>
             </p>
 
             <p>
-                <label>Производитель:</label>
-                <select>
-                    <option>Все</option>
-                    <option>Apple</option>
-                    <option>Google</option>
-                    <option>Nothing</option>
-                    <option>OnePlus</option>
-                    <option>OPPO</option>
-                    <option>Samsung</option>
-                    <option>Xiaomi</option>
-                </select>
+                <label>Производитель: <input type="text" id="filter-manufacturer"></label>
             </p>
 
             <p>
-                <label>Страна:</label>
-                <select>
+                <label>Страна: 
+                <select id="filter-country">
                     <option>Все</option>
                     <option>Великобритания</option>
                     <option>Китай</option>
                     <option>США</option>
                     <option>Южная Корея</option>
                 </select>
+                </label>
             </p>
 
             <p>
-                <label>Год выпуска от</label>
-                <input type="number" min="1900" max="2100">
-                <label>до</label>
-                <input type="number" min="1900" max="2100">
+                <label>Год выпуска от <input type="number" min="1900" max="2100" id="filter-year-from"></label>
+                <label>до <input type="number" min="1900" max="2100" id="filter-year-to"></label>
             </p>
 
             <p>
-                <label>Цена, $ от</label>
-                <input type="number" min="0">
-                <label>до</label>
-                <input type="number" min="0">
+                <label>Цена, $ от
+                <input type="number" min="0" max="3000" id="filter-price-from">
+                </label>
+                <label>до
+                <input type="number" min="0" max="3000" id="filter-price-to">
+                </label>
             </p>
 
             <p>
-                <label>Семейство процессоров:</label>
-                <select>
+                <label>Семейство процессоров:
+                <select id="filter-processor">
                     <option>Все</option>
                     <option>Apple A-series</option>
                     <option>Dimensity</option>
@@ -109,16 +100,17 @@
                     <option>Samsung Exynos</option>
                     <option>Snapdragon</option>
                 </select>
+                </label>
             </p>
 
             <p>
-                <label>RAM, ГБ от</label>
-                <input type="number" min="0">
-                <label>до</label>
-                <input type="number" min="0">
+                <label>RAM, ГБ от
+                <input type="number" min="0" max="2000" id="filter-ram-from"></label>
+
+                <label>до <input type="number" min="0" max="2000" id="filter-ram-to"></label>
             </p>
 
-            <input type="button" value="Найти">
+            <input type="button" value="Найти" id="btn-search">
         </form>
     </details>
 
@@ -130,8 +122,8 @@
 
         <form>
             <p>
-                <label>Первый уровень:</label>
-                <select>
+                <label>Первый уровень:
+                <select id="sort-level-1">
                     <option>Нет</option>
                     <option>Модель</option>
                     <option>Производитель</option>
@@ -141,13 +133,14 @@
                     <option>Семейство процессоров</option>
                     <option>RAM, ГБ</option>
                 </select>
-                <label>По убыванию</label>
+                </label>
+                <label id="sort-desc-1">По убыванию</label>
                 <input type="checkbox">
             </p>
 
             <p>
-                <label>Второй уровень:</label>
-                <select>
+                <label>Второй уровень:
+                <select id="sort-level-2">
                     <option>Нет</option>
                     <option>Модель</option>
                     <option>Производитель</option>
@@ -157,13 +150,15 @@
                     <option>Семейство процессоров</option>
                     <option>RAM, ГБ</option>
                 </select>
-                <label>По убыванию</label>
-                <input type="checkbox">
+                </label>
+                <label>По убыванию
+                <input type="checkbox" id="sort-desc-2">
+                </label>
             </p>
 
             <p>
-                <label>Третий уровень:</label>
-                <select>
+                <label>Третий уровень:
+                <select id="sort-level-3">
                     <option>Нет</option>
                     <option>Модель</option>
                     <option>Производитель</option>
@@ -172,11 +167,13 @@
                     <option>Цена, $</option>
                     <option>Семейство процессоров</option>
                 </select>
-                <label>По убыванию</label>
-                <input type="checkbox">
+                </label>
+                <label>По убыванию
+                <input type="checkbox" id="sort-desc-3">
+                </label>
             </p>
 
-            <input type="button" value="Сортировать">
+            <input type="button" value="Сортировать" id="btn-sort">
         </form>
     </details>
 
