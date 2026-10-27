@@ -1,0 +1,156 @@
+img {
+    display: block;
+}
+a {
+    color: #806000;
+}
+
+.search, .gcol, .main, .side, .circle, .art-text, .art-img, .slogan {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* ---------- Хедер ---------- */
+.menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.menu li {
+    display: inline-block;
+}
+.menu a {
+    display: block;
+    padding: 10px 16px;
+    color: #000;
+    text-decoration: none;
+}
+.menu .active a {
+    background: #4dabf5;
+    color: #fff;
+}
+
+.bar {
+    background: #4dabf5;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 16px;
+}
+.slogan {
+    width: 50%;
+    vertical-align: middle;
+}
+.search {
+    width: 50%;
+    text-align: right;
+}
+
+/* ---------- Центральный блок ---------- */
+.page {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.gallery {
+    height: 12vw;
+}
+.gcol {
+    width: 24%;
+    height: 100%;
+}
+.pic {
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    border: 3px solid #fff;
+    object-fit: cover
+}
+.big {
+    height: 100%;
+}
+
+.main {
+    width: 66%;
+}
+.side {
+    width: 30%;
+    margin-top: 2%;
+    margin-left: 2%;
+    padding-left: 1%;
+    border-left: 1px solid #806000;
+}
+
+/* круглые логотипы */
+.circles {
+    padding-top: 2%;
+}
+.circle {
+    width: 23%;
+    text-align: center;
+}
+.circle h3 {
+    margin: 1%;
+}
+.circle p {
+    margin-top: 1%;
+}
+.round {
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.btn {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #2196f3;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Горизонтальные блоки, статьи */
+.article {
+    border: 1px solid #888;
+    padding: 1%;
+    margin-top: 2%;
+}
+.art-img {
+    width: 15%;
+}
+.art-text {
+    width: 79%;
+}
+.left {
+    margin-left: 2%;
+}
+.right {
+    margin-right: 2%;
+    text-align: right;
+}
+
+/* Карточки справа */
+.card {
+    border: 1px solid #bde0fe;
+    border-radius: 30px;
+    padding: 3%;
+    margin-bottom: 3%;
+}
+.card h3 {
+    text-align: center;
+}
+.rounded {
+    width: 50%;
+    margin: 10px auto;
+    border-radius: 20px;
+}
+
+/* ---------- Футер ---------- */
+footer {
+    text-align: center;
+    border-top: 1px solid #888;
+    margin-top: 20px;
+    padding: 10px;
+}
