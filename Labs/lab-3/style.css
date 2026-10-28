@@ -1,0 +1,194 @@
+body {
+    background-color: #f8f9fa;
+}
+
+header{
+    width: 80%;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #e0e4ec; /* Тонкая серая рамка*/
+    border-radius: 12px; /* Скругленные углы */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.03); /* Легкая тень */
+    max-width: 1200px;
+}
+
+/* Навбар */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+
+    flex-direction: row;      
+    justify-content: space-between; 
+}
+
+@media(max-width:900px){
+    .navbar {
+
+        gap: 14px;
+        flex-direction: column;
+    }
+}
+
+
+/* Заголовок */
+.navbar-title {
+    font-weight: bold;
+    color: #4a6b82;
+    letter-spacing: 0.05em;
+}
+
+nav {
+    display: flex;
+
+    gap: 14px;
+}
+
+/* Базовый стиль для всех навигационных ссылок*/
+.nav-btn {
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 6px; /* Скругление кнопок */
+    color: #0288d1; /* Цвет для ссылок */
+}
+
+/* Стиль для активного пункта меню */
+.nav-btn.active {
+    background-color: #0288d1; /* Яркий синий фон */
+    color: #ffffff; /* Белый текст */
+    box-shadow: 0px 2px 4px rgba(2, 136, 209, 0.2); /* Свечение под кнопкой */
+}
+
+/* Эффект наведения на неактивную ссылку */
+.nav-btn:hover {
+    background-color: rgba(2, 136, 209, 0.06);
+}
+
+
+/* Сетка галереи */
+.gallery {
+    display: grid;
+    width: 80%;
+    margin: 14px auto;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 10px;
+    max-width: 1200px;
+}
+
+@media(max-width: 900px) {
+    .gallery{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Элемент галереи */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05); /* Легкая тень */
+}
+/* Стилизация картинок внутри блоков */
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Картинка заполняет блок без искажения пропорций */
+}
+
+/* Для растягивания на 2 ячейки */
+.tall {
+    grid-row: span 2;   
+}
+
+
+/* Общая сетка для карточек */
+.cards-grid {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    
+    /* ограничение в 1200 пикселей для широких экранов */
+    max-width: 1200px;
+    /* Расстояние между карточками 14 пикселей */
+    gap: 14px;
+    /* выравнивание блока по центру */
+    margin: auto;
+}
+
+@media(max-width: 900px) {
+    .cards-grid {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
+/* Карточка */
+.card {
+    display: flex; /* ВКЛЮЧАЕМ FLEX ДЛЯ ВНУТРЕННОСТЕЙ КАРТОЧКИ */
+    background-color: #ffffff;
+    border: 1px solid #e0e4ec;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.04);
+    align-items: center; 
+
+    gap: 14px;
+    padding: 14px;
+}
+
+.card-info {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.card img {
+    width: 25%;     
+    max-width: 25%;  
+    height: auto;   
+}
+
+.card h3 {
+    color: #4f7b9e;
+}
+
+.card p {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 1rem;
+    color: #63646c;
+}
+
+.card a {
+    align-self: flex-end;
+    margin-top: auto;
+    color: #5b90da;
+}
+
+/* смена сторон и её отключение в узкой версии */
+.card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.card:nth-child(even) a {
+  align-self: flex-start;
+}
+
+@media(max-width: 900px) {
+    .card:nth-child(even) {
+        flex-direction: row;
+    }
+
+  .card:nth-child(even) a {
+    align-self: flex-end;
+  }
+}
+
+/* Футер */
+
+footer {
+    text-align: center;
+    border-top: 1px solid #888;
+    margin-top: 20px;
+    padding: 5px;
+}
